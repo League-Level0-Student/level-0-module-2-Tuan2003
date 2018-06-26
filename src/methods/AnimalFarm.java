@@ -18,7 +18,17 @@ AnimalFarm() {
 	 * 1. Ask the user which animal they want, then play the sound of that
 	 * animal.
 	 */
-
+	int musicChoice = JOptionPane.showOptionDialog(null, "Which animal sound would you like to listen to?", "Pick your choice", 0,
+			JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Cow", "Chicken", "Dog" }, null);
+if (musicChoice == 0) {
+playMoo(mooFile);
+}
+if(musicChoice == 1) {
+playQuack(quackFile);	
+}
+if(musicChoice == 2) {
+playWoof(woofFile);
+}
 	/* 2. Make it so that the user can keep entering new animals. */
 }
 
